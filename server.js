@@ -3,7 +3,7 @@ const path = require('path')
 const app = express()
 const fs = require("fs")
 const { json } = require('express')
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3000;
 
 app.use(express.json())
 app.use(express.static("public"));
@@ -33,27 +33,27 @@ app.post('/api/notes', (req, res) => {
     let nextId = "0"
     if(notes.length > 0){
         const notesLastIndex = notes.length - 1;
-        let lastNoteInNotes = notes[notesLastIndex];
-        nextId = lastNoteInNotes.id
+        let lastNote = notes[notesLastIndex];
+        nextId = lastNote.id
     }
 
 
     let newNote = req.body
-    newNote.id = id
+    newNote.id = nextId
 
 
-    notes.push(req.body)
+    notes.push(newNote)
     saveDatabaseContent(notes)
-    res.json(req.body)
+    res.json(newNote)
 
 })
+
 
 function getDatabaseContent() {
     let notes = fs.readFileSync(__dirname + "/db/db.json", {
         encoding: 'utf-8',
     });
     notes = JSON.parse(notes)
-    console.log(notes);
     return notes
 }
 

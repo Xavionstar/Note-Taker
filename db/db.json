@@ -1,12 +1,1 @@
-[
-    {
-        "title": "Test Title",
-        "text": "Test text",
-        "id": "1"
-    },
-    {
-        "title": "shoes",
-        "text": "good shoes",
-        "id": "2"
-    }
-]
+[{"title":"Test Title","text":"Test text","id":"1"},{"title":"shoes","text":"good shoes","id":"2"},{"title":"richie","text":"biutt","id":"2"}]
