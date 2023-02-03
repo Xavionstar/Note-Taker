@@ -10,4 +10,4 @@ https://github.com/Xavionstar/Note-Taker
 Lincoln WInter Pough, Express Enthusiast
 
 ## Screenshot
-![picture of web page](https://github.com/Xavionstar/public/assets/note-taker.png?raw=true)
+![picture of web page](https://github.com/Xavionstar/note-taker/blob/public/assets/note-taker.png?raw=true)
